@@ -1,10 +1,8 @@
-Using rack adapter
-Thin web server (v1.7.2 codename Bachmanity)
-Maximum connections set to 1024
-Listening on 0.0.0.0:3000, CTRL+C to stopRails.application.routes.draw do
+Rails.application.routes.draw do
   root 'welcome#home'
-  
-  get '/auth/facebook/callback' => 'sessions#create'
+  get 'welcome/home' => 'welcome#home'
+
+  get '/auth/facebook/callback' => 'sessions#create
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
